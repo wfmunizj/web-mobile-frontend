@@ -4,7 +4,7 @@
     border: 1px solid #ddd;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     border-radius: 0.75rem;
-    padding: 40px;
+    padding: 2.5rem;
     max-width: 960px;
     width: 90%;
     display: flex;
@@ -18,7 +18,7 @@
     align-items: center;
     min-height: 100vh;
     flex-direction: column;
-    padding: 20px;
+    padding: 1.25rem;
     background-image: radial-gradient(circle at 1px 1px, #e0e0e0 1px, transparent 0);
     background-size: 20px 20px;
 }
@@ -29,6 +29,7 @@
     color: #333;
     max-width: 800px;
     text-align: center;
+    padding-bottom: 1.25rem;
 }
 
 .inputContainer {
@@ -41,9 +42,9 @@
 
 .input {
     padding: 1rem;
-    width: 80%;
-    max-width: 700px;
-    min-width: 300px;
+    width: 90%;
+    max-width: 43.75rem;
+    min-width: 18.75rem;
     border: 1px solid #ccc;
     border-radius: 0.5rem;
     font-size: 1.2rem;
@@ -66,9 +67,12 @@
 
 /* Responsividade para telas pequenas */
 @media (max-width: 600px) {
+    .inputContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .input {
-        width: 85%;
-        max-width: 400px;
         padding: 0.75rem;
         font-size: 1rem;
     }
