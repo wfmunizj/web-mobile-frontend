@@ -2,8 +2,8 @@ import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <section className={styles.card}>
+    <main className="main">
+      <section className="card">
         <header>
           <h1 className={styles.title}>
             Seus clipes favoritos, em um só lugar e com mais facilidade!
