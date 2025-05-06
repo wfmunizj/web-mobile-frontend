@@ -27,9 +27,24 @@
     border-bottom: none;
 }
 
+.musicIndex {
+    width: 2rem;
+    text-align: right;
+    margin-right: 1rem;
+    color: #888;
+    font-weight: 500;
+}
+
+.musicTitleWrapper {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
 .musicTitle {
     font-weight: 600;
     color: #333;
+    display: block;
 }
 
 .playButton {

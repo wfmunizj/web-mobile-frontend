@@ -27,7 +27,10 @@ export default function Home() {
                 <section className={styles.musicList}>
                     {musicas.map((musica, index) => (
                         <div key={index} className={styles.musicItem}>
-                            <span className={styles.musicTitle}>{musica}</span>
+                            <span className={styles.musicIndex}>{index + 1}.</span>
+                            <div className={styles.musicTitleWrapper}>
+                                <span className={styles.musicTitle}>{musica}</span>
+                            </div>
                             <button className={styles.playButton}>Play</button>
                         </div>
                     ))}
