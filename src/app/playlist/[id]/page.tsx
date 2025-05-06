@@ -1,6 +1,21 @@
 import styles from "./page.module.css";
 
 export default function Home() {
+    const musicas = [
+        "Céu de Diamantes",
+        "Ritmo da Chuva",
+        "Noite Estrelada",
+        "Caminhos do Coração",
+        "Reflexos da Alma",
+        "Acordes do Destino",
+        "Luzes da Cidade",
+        "Canção da Esperança",
+        "Sussurros do Vento",
+        "Além do Horizonte",
+        "Ecos do Passado",
+        "Versos Inesquecíveis",
+    ];
+
     return (
         <main className="main">
             <section className="card">
@@ -9,8 +24,13 @@ export default function Home() {
                         Músicas encontradas na playlist
                     </h1>
                 </header>
-                <section>
-                    <p>Exibir lista de musicas</p>
+                <section className={styles.musicList}>
+                    {musicas.map((musica, index) => (
+                        <div key={index} className={styles.musicItem}>
+                            <span className={styles.musicTitle}>{musica}</span>
+                            <button className={styles.playButton}>Play</button>
+                        </div>
+                    ))}
                 </section>
             </section>
         </main>

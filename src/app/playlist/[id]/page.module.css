@@ -1,0 +1,48 @@
+.musicList {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #f8f8f8;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.musicItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+    background: white;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.musicItem:hover {
+    background-color: #f0f4ff;
+}
+
+.musicItem:last-child {
+    border-bottom: none;
+}
+
+.musicTitle {
+    font-weight: 600;
+    color: #333;
+}
+
+.playButton {
+    background-color: #007aff;
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.playButton:hover {
+    background-color: #005bb5;
+}
