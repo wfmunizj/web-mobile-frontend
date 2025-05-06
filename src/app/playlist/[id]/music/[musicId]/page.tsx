@@ -10,7 +10,9 @@ export default function Home() {
                     </h1>
                 </header>
                 <section>
-                    <p>Exibir player</p>
+                    <iframe width="420" height="315"
+                        src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                    </iframe>
                 </section>
             </section>
         </main>
