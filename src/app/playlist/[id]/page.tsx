@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -18,6 +19,16 @@ export default function Home() {
 
     return (
         <main className="main">
+            <section className={`card ${styles.breadcrumbContainer}`}>
+                <header>
+                    <nav className={styles.breadcrumb}>
+                        <Link href="/" className={styles.breadcrumbLink}>
+                            🏠 Início
+                        </Link>
+                    </nav>
+                </header>
+            </section>
+            <br />
             <section className="card">
                 <header>
                     <h1 className={styles.title}>

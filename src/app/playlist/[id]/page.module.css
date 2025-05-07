@@ -61,3 +61,39 @@
 .playButton:hover {
     background-color: #005bb5;
 }
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    /* color: #007aff; */
+    margin-bottom: 1.5rem;
+    /* padding-left: 1rem;
+    padding-top: 1rem; */
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding-left: 1rem;
+}
+
+.breadcrumbLink {
+    text-decoration: none;
+    color: #007aff;
+    /* transition: color 0.2s ease-in-out; */
+}
+
+.breadcrumbLink:hover {
+    color: #005bb5;
+}
+
+
+.title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding-left: 1rem;
+}
+
+.breadcrumbContainer {
+    align-items: flex-start;
+}
