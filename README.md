@@ -1,6 +1,7 @@
 
-````markdown
-# Web Mobile Frontend
+---
+
+# README - Frontend da Aplicação Spotify para YouTube
 
 Este projeto é a interface frontend de um sistema que integra o Spotify e o YouTube. Ele permite ao usuário buscar músicas de uma playlist do Spotify e visualizar os vídeos correspondentes no YouTube. O sistema é composto por uma interface interativa, onde o usuário pode buscar playlists, visualizar músicas e navegar entre elas.
 
@@ -34,7 +35,7 @@ Antes de rodar o projeto, certifique-se de ter o Node.js e o npm/yarn instalados
    ```bash
    git clone https://github.com/wfmunizj/web-mobile-frontend.git
    cd web-mobile-frontend
-````
+   ```
 
 2. Instale as dependências:
 
@@ -73,6 +74,4 @@ Antes de rodar o projeto, certifique-se de ter o Node.js e o npm/yarn instalados
 * **/styles**: Arquivos de estilo da aplicação (CSS Modules).
 * **/utils**: Funções utilitárias, como a transformação de strings para slugs.
 
-
-```
-
+---
