@@ -1,0 +1,113 @@
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    max-width: 800px;
+    text-align: center;
+    padding-bottom: 1.25rem;
+}
+
+.inputContainer {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 1000px;
+    /* justify-content: center; */
+}
+
+.input {
+    padding: 1rem;
+    width: 90%;
+    max-width: 43.75rem;
+    min-width: 18.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.button {
+    background-color: #22c55e;
+    color: white;
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #16a34a;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.loaderCard {
+  background-color: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  text-align: center;
+  width: 300px;
+}
+
+.loaderTitle {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #007aff;
+}
+
+.progressContainer {
+  background-color: #eee;
+  height: 16px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progressBar {
+  background-color: #007aff;
+  height: 100%;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.progressText {
+  font-size: 14px;
+  color: #333;
+}
+
+
+/* Responsividade para telas pequenas */
+@media (max-width: 600px) {
+    .inputContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input {
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+
+    .button {
+        padding: 0.75rem 1.25rem;
+        font-size: 1rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+}
