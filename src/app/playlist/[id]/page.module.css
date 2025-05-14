@@ -55,6 +55,7 @@
     border-radius: 14px;
     font-weight: 600;
     cursor: pointer;
+    margin-left: calc(10px - 2px);
     transition: background-color 0.3s ease;
 }
 
@@ -92,6 +93,7 @@
     font-size: 1.25rem;
     font-weight: 600;
     padding-left: 1rem;
+    color: #007aff;
 }
 
 .breadcrumbContainer {

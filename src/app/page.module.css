@@ -40,6 +40,56 @@
     background-color: #16a34a;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.loaderCard {
+  background-color: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  text-align: center;
+  width: 300px;
+}
+
+.loaderTitle {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #007aff;
+}
+
+.progressContainer {
+  background-color: #eee;
+  height: 16px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progressBar {
+  background-color: #007aff;
+  height: 100%;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.progressText {
+  font-size: 14px;
+  color: #333;
+}
+
+
 /* Responsividade para telas pequenas */
 @media (max-width: 600px) {
     .inputContainer {

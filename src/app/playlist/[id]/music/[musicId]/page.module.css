@@ -21,6 +21,7 @@
 
 .breadcrumbLink:hover {
     color: #005bb5;
+    cursor: pointer;
 }
 
 .separator {
@@ -32,8 +33,46 @@
     font-size: 1.25rem;
     font-weight: 600;
     padding-left: 1rem;
+    color: #007aff;
+    /* border: 1px solid red; */
 }
 
 .breadcrumbContainer {
     align-items: flex-start;
+}
+
+.youtubePlayer {
+    width: calc(100vw - 46vw) !important;
+    height: 52vh !important;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.playButton {
+  background-color: #007aff;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: calc(10px - 2px);
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Estilo para o hover fora da regra */
+.playButton:hover {
+  background-color: #005bb5;
+}
+
+.playButton:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+  opacity: 0.7;
 }
