@@ -23,7 +23,7 @@ export default function Home() {
     console.time("Tempo de requisição da API"); // Marca o tempo de requisição à API
 
     // Realiza uma requisição POST para a API que buscará as músicas da playlist
-    const res = await fetch("http://localhost:3001/api/playlist", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/playlist`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ link }), // Envia o link da playlist no corpo da requisição

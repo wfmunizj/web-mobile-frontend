@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function MusicPage() {
   // Obtém os parâmetros da URL, especificamente o 'id' da playlist e o 'musicId' da música
   const { id, musicId } = useParams() as { id: string; musicId: string };
-  const router = useRouter(); 
+  const router = useRouter();
 
   // Estado para armazenar as músicas da playlist
   const [musicas, setMusicas] = useState<
@@ -54,6 +54,15 @@ export default function MusicPage() {
     }
   };
 
+  function getYouTubeId(url: string | null | undefined): string | null {
+    if (!url) return null;
+
+    const match = url.match(/(?:v=|\/embed\/|\.be\/)([a-zA-Z0-9_-]{11})/);
+    return match ? match[1] : null;
+  }
+
+  const youtubeId = getYouTubeId(musica.youtubeUrl);
+
   return (
     <main className="main">
       {/* Seção de breadcrumb de navegação */}
@@ -80,9 +89,7 @@ export default function MusicPage() {
           {/* Player do YouTube incorporado com a URL da música */}
           <iframe
             className={styles.youtubePlayer}
-            src={`https://www.youtube.com/embed/${
-              musica.youtubeUrl.split("v=")[1]
-            }`}
+            src={youtubeId ? `https://www.youtube.com/embed/${youtubeId}` : ""}
           ></iframe>
         </section>
       </section>
@@ -99,7 +106,7 @@ export default function MusicPage() {
           >
             ⏮ Anterior
           </button>
-          
+
           <button
             onClick={irParaProxima}
             className={styles.playButton}
