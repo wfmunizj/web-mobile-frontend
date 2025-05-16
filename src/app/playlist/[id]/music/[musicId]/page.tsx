@@ -4,6 +4,7 @@ import { useParams, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
+import Card from "@/components/Card/Card";
 
 export default function MusicPage() {
   // Obtém os parâmetros da URL, especificamente o 'id' da playlist e o 'musicId' da música
@@ -57,8 +58,8 @@ export default function MusicPage() {
   return (
     <main className="main">
       {/* Seção de breadcrumb de navegação */}
-      <section className={`card ${styles.breadcrumbContainer}`}>
-        <header>
+      <Card>
+        <header className={` ${styles.breadcrumbContainer}`}>
           <nav className={styles.breadcrumb}>
             <Link href="/" className={styles.breadcrumbLink}>
               🏠 Início
@@ -73,9 +74,9 @@ export default function MusicPage() {
             </span>
           </nav>
         </header>
-      </section>
+      </Card>
       <br />
-      <section className="card">
+      <Card>
         <section>
           {/* Player do YouTube incorporado com a URL da música */}
           <iframe
@@ -85,9 +86,9 @@ export default function MusicPage() {
             }`}
           ></iframe>
         </section>
-      </section>
+      </Card>
       <br />
-      <section className="card">
+      <Card>
         <header>
           <h1 className={styles.title}>{musica.title}</h1>
         </header>
@@ -108,7 +109,7 @@ export default function MusicPage() {
             Próxima ⏭
           </button>
         </div>
-      </section>
+      </Card>
     </main>
   );
 }

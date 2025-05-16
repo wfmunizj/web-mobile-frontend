@@ -4,6 +4,7 @@ import Link from "next/link";
 import styles from "./page.module.css";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import Card from "@/components/Card/Card";
 
 export default function Home() {
   // Definindo o estado para armazenar a lista de músicas
@@ -31,8 +32,8 @@ export default function Home() {
   return (
     <main className="main">
       {/* Seção de breadcrumb de navegação */}
-      <section className={`card ${styles.breadcrumbContainer}`}>
-        <header>
+      <Card>
+        <header className={` ${styles.breadcrumbContainer}`}>
           <nav className={styles.breadcrumb}>
             {/* Link que redireciona o usuário para a página inicial */}
             <Link href="/" className={styles.breadcrumbLink}>
@@ -40,9 +41,9 @@ export default function Home() {
             </Link>
           </nav>
         </header>
-      </section>
+      </Card>
       <br />
-      <section className="card">
+      <Card>
         <header>
           {/* Título da página, informando que as músicas foram encontradas */}
           <h1 className={styles.title}>Músicas encontradas na playlist</h1>
@@ -67,7 +68,7 @@ export default function Home() {
             </div>
           ))}
         </section>
-      </section>
+      </Card>
     </main>
   );
 }
