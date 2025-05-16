@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import slugify from "slugify";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Card from "@/components/Card/Card";
 
 export default function Home() {
   // Definindo os estados locais para o link, carregamento, progresso e total de músicas.
@@ -66,7 +67,7 @@ export default function Home() {
 
   return (
     <main className="main">
-      <section className="card">
+      <Card>
         <header>
           <h1 className={styles.title}>
             Seus clipes favoritos, em um só lugar e com mais facilidade!
@@ -88,7 +89,7 @@ export default function Home() {
             {loading ? "Buscando..." : "Buscar"} {/* Exibe texto diferente baseado no estado de carregamento */}
           </button>
         </section>
-      </section>
+      </Card>
 
       {/* Exibe o overlay de carregamento caso o estado 'loading' seja verdadeiro */}
       {loading && (
